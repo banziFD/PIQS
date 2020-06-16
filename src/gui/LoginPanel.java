@@ -19,7 +19,8 @@ public class LoginPanel extends JPanel {
 
         // 指向父JFrame的指针
         this.mainFrame = parentFrame;
-        this.userTable = new UserTable(this.mainFrame.serverURL, this.mainFrame.databaseName, this.mainFrame.user, this.mainFrame.password);
+        this.userTable = new UserTable(this.mainFrame.serverURL, this.mainFrame.databaseName, this.mainFrame.user,
+                this.mainFrame.password);
 
         java.awt.FlowLayout fl = new java.awt.FlowLayout(FlowLayout.CENTER, 5, 5);
         this.setLayout(fl);
@@ -58,7 +59,6 @@ public class LoginPanel extends JPanel {
         javax.swing.JButton button = new javax.swing.JButton();
         button.setText("登录");
         button.setPreferredSize(dim4);
-
 
         // 登陆按钮监听器
         button.addActionListener(new ActionListener() {
