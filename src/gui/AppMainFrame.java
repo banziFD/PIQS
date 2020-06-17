@@ -1,13 +1,6 @@
 package gui;
 
-import java.awt.*;
 import javax.swing.*;
-import java.awt.FlowLayout;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.JPasswordField;
 
 public class AppMainFrame extends JFrame {
 	public String serverURL;
@@ -19,19 +12,11 @@ public class AppMainFrame extends JFrame {
 	private JPanel merchantPanel;
 	private JPanel selSearchPanel;
 	private JPanel selSearchDetailPanel;
-	private JPanel selSearchDetailPanel1;
-	private JPanel selSearchDetailPanel2;
-	private JPanel selSearchDetailPanel3;
-	private JPanel selSearchDetailPanel4;
 	private JPanel installPanel;
 
 	private JPanel cusSearchPanel;
 	private JPanel cusSearchDetailPanel;
 	private JPanel cusSearchPagePanel;
-	private JPanel cusSearchPagePanel1;
-	private JPanel cusSearchPagePanel2;
-	private JPanel cusSearchPagePanel3;
-	private JPanel cusSearchPagePanel4;
 
 	public AppMainFrame(String serverURL, String databaseName, String user, String password) {
 		super();
@@ -94,7 +79,7 @@ public class AppMainFrame extends JFrame {
 		this.repaint();
 	}
 
-	public void showSelSearchDetailPanel() {
+	public void showSelSearchDetailPanel(String prodName) {
 
 		this.setTitle("商品详情页面");
 		this.setSize(370, 520);// 鍙椤剁骇瀹瑰櫒鏈夋晥
@@ -111,70 +96,9 @@ public class AppMainFrame extends JFrame {
 		this.repaint();
 	}
 
-	public void showSelSearchDetailPanel1() {
 
-		this.setTitle("商品详情页面");
-		this.setSize(370, 520);// 鍙椤剁骇瀹瑰櫒鏈夋晥
-		this.setDefaultCloseOperation(3);// 绐椾綋鍏抽棴鏃剁粨鏉熺▼搴�
-		this.setLocationRelativeTo(null);// 灞呬腑
-		this.setResizable(false);
-		this.selSearchDetailPanel1 = new SelSearchDetailPanel1(this);
-		this.add(this.selSearchDetailPanel1);
-		this.repaint();
-	}
 
-	public void closeSelSearchDetailPanel1() {
-		this.remove(this.selSearchDetailPanel1);
-		this.repaint();
-	}
 
-	public void showSelSearchDetailPanel2() {
-		this.setTitle("商品详情界面");
-		this.setSize(370, 520);// 鍙椤剁骇瀹瑰櫒鏈夋晥
-		this.setDefaultCloseOperation(3);// 绐椾綋鍏抽棴鏃剁粨鏉熺▼搴�
-		this.setLocationRelativeTo(null);// 灞呬腑
-		this.setResizable(false);
-		this.selSearchDetailPanel2 = new SelSearchDetailPanel2(this);
-		this.add(this.selSearchDetailPanel2);
-		this.repaint();
-	}
-
-	public void closeSelSearchDetailPanel2() {
-		this.remove(this.selSearchDetailPanel2);
-		this.repaint();
-	}
-
-	public void showSelSearchDetailPanel3() {
-		this.setTitle("商品详情界面");
-		this.setSize(370, 520);// 鍙椤剁骇瀹瑰櫒鏈夋晥
-		this.setDefaultCloseOperation(3);// 绐椾綋鍏抽棴鏃剁粨鏉熺▼搴�
-		this.setLocationRelativeTo(null);// 灞呬腑
-		this.setResizable(false);
-		this.selSearchDetailPanel3 = new SelSearchDetailPanel3(this);
-		this.add(this.selSearchDetailPanel3);
-		this.repaint();
-	}
-
-	public void closeSelSearchDetailPanel3() {
-		this.remove(this.selSearchDetailPanel3);
-		this.repaint();
-	}
-
-	public void showSelSearchDetailPanel4() {
-		this.setTitle("商品详情界面");
-		this.setSize(370, 520);// 鍙椤剁骇瀹瑰櫒鏈夋晥
-		this.setDefaultCloseOperation(3);// 绐椾綋鍏抽棴鏃剁粨鏉熺▼搴�
-		this.setLocationRelativeTo(null);// 灞呬腑
-		this.setResizable(false);
-		this.selSearchDetailPanel4 = new SelSearchDetailPanel4(this);
-		this.add(this.selSearchDetailPanel4);
-		this.repaint();
-	}
-
-	public void closeSelSearchDetailPanel4() {
-		this.remove(this.selSearchDetailPanel4);
-		this.repaint();
-	}
 
 	public void showInstallPanel() {
 		this.setTitle("商品上新界面");
@@ -194,7 +118,7 @@ public class AppMainFrame extends JFrame {
 
 	public void showCusSearchPanel() {
 		this.setTitle("顾客界面");
-		this.setSize(300, 200);// 鍙椤剁骇瀹瑰櫒鏈夋晥
+		this.setSize(300, 350);// 鍙椤剁骇瀹瑰櫒鏈夋晥
 		this.setDefaultCloseOperation(3);// 绐椾綋鍏抽棴鏃剁粨鏉熺▼搴�
 		this.setLocationRelativeTo(null);// 灞呬腑
 		this.setResizable(false);
@@ -224,7 +148,7 @@ public class AppMainFrame extends JFrame {
 		this.repaint();
 	}
 
-	public void showCusSearchPagePanel() {
+	public void showCusSearchPagePanel(String sano, String prdno) {
 		this.setTitle("商品详情界面");
 		this.setSize(340, 500);// 鍙椤剁骇瀹瑰櫒鏈夋晥
 		this.setDefaultCloseOperation(3);// 绐椾綋鍏抽棴鏃剁粨鏉熺▼搴�
@@ -240,68 +164,5 @@ public class AppMainFrame extends JFrame {
 		this.repaint();
 	}
 
-	public void showCusSearchPagePanel1() {
-		this.setTitle("商品详情界面");
-		this.setSize(340, 500);// 鍙椤剁骇瀹瑰櫒鏈夋晥
-		this.setDefaultCloseOperation(3);// 绐椾綋鍏抽棴鏃剁粨鏉熺▼搴�
-		this.setLocationRelativeTo(null);// 灞呬腑
-		this.setResizable(false);
-		this.cusSearchPagePanel1 = new CusSearchPagePanel1(this);
-		this.add(this.cusSearchPagePanel1);
-		this.repaint();
-	}
-
-	public void closeCusSearchPagePanel1() {
-		this.remove(this.cusSearchPagePanel1);
-		this.repaint();
-	}
-
-	public void showCusSearchPagePanel2() {
-		this.setTitle("商品详情界面");
-		this.setSize(340, 500);// 鍙椤剁骇瀹瑰櫒鏈夋晥
-		this.setDefaultCloseOperation(3);// 绐椾綋鍏抽棴鏃剁粨鏉熺▼搴�
-		this.setLocationRelativeTo(null);// 灞呬腑
-		this.setResizable(false);
-		this.cusSearchPagePanel2 = new CusSearchPagePanel2(this);
-		this.add(this.cusSearchPagePanel2);
-		this.repaint();
-	}
-
-	public void closeCusSearchPagePanel2() {
-		this.remove(this.cusSearchPagePanel2);
-		this.repaint();
-	}
-
-	public void showCusSearchPagePanel3() {
-		this.setTitle("商品品类大全");
-		this.setSize(340, 500);// 鍙椤剁骇瀹瑰櫒鏈夋晥
-		this.setDefaultCloseOperation(3);// 绐椾綋鍏抽棴鏃剁粨鏉熺▼搴�
-		this.setLocationRelativeTo(null);// 灞呬腑
-		this.setResizable(false);
-		this.cusSearchPagePanel3 = new CusSearchPagePanel3(this);
-		this.add(this.cusSearchPagePanel3);
-		this.repaint();
-	}
-
-	public void closeCusSearchPagePanel3() {
-		this.remove(this.cusSearchPagePanel3);
-		this.repaint();
-	}
-
-	public void showCusSearchPagePanel4() {
-		this.setTitle("商品品类大全");
-		this.setSize(340, 500);// 鍙椤剁骇瀹瑰櫒鏈夋晥
-		this.setDefaultCloseOperation(3);// 绐椾綋鍏抽棴鏃剁粨鏉熺▼搴�
-		this.setLocationRelativeTo(null);// 灞呬腑
-		this.setResizable(false);
-		this.cusSearchPagePanel4 = new CusSearchPagePanel4(this);
-		this.add(this.cusSearchPagePanel4);
-		this.repaint();
-	}
-
-	public void closeCusSearchPagePanel4() {
-		this.remove(this.cusSearchPagePanel4);
-		this.repaint();
-	}
 
 }

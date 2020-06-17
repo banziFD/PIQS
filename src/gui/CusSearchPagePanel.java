@@ -27,10 +27,10 @@ public class CusSearchPagePanel extends JPanel {
 		java.awt.Dimension dim15 = new java.awt.Dimension(180, 35);// 顾客商品大界面属性值标签大小
 		java.awt.Dimension dim16 = new java.awt.Dimension(100, 35);// 购物车按钮
 		java.awt.Dimension dim17 = new java.awt.Dimension(35100, 35);// 提示图片的大小
-		javax.swing.ImageIcon icon = new javax.swing.ImageIcon("F:\\wallpapers\\苹果.jpg");
+		javax.swing.ImageIcon icon = new javax.swing.ImageIcon("assets/apple.jpg");
 		JLabel labpic = new JLabel(icon);// 不可以直接把图片加到顶级容器中，需要先将其设置为标签
 		labpic.setPreferredSize(dim14);
-		this.add(labpic);
+
 		Icon icon1_1 = new ImageIcon("F:\\wallpapers\\icon2.png");
 		JLabel[] labelname3_1 = new JLabel[15];
 		JLabel[] labelname3_2 = new JLabel[15];
@@ -80,6 +80,7 @@ public class CusSearchPagePanel extends JPanel {
 				mainFrame.showCusSearchDetailPanel();
 			}
 		});
+		this.add(labpic);
 		this.add(button6_1, BorderLayout.EAST);
 		this.add(button6_2, BorderLayout.EAST);
 	}

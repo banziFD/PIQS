@@ -1,10 +1,6 @@
 package db;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 public class UserTable {
     private String connectionURL;
@@ -14,18 +10,18 @@ public class UserTable {
         this.connectionURL = String.format("%s;databaseName=%s;user=%s;password=%s", serverURL, databaseName, user,
                 password);
         System.out.println(String.format("%s: %s", "connectionURL", this.connectionURL));
-        try {
-            System.out.println("Connecting to SQL Server ...");
-            this.connection = DriverManager.getConnection(connectionURL);
-            System.out.println("Success connecting server");
-        } catch (SQLException e) {
-            System.out.println("Error in creating connection to SQL Server");
-            e.printStackTrace();
-        }
+    //    try {
+    //        System.out.println("Connecting to SQL Server ...");
+    //        this.connection = DriverManager.getConnection(connectionURL);
+    //        System.out.println("Success connecting server");
+    //    } catch (SQLException e) {
+    //        System.out.println("Error in creating connection to SQL Server");
+    //        e.printStackTrace();
+    //    }
     }
 
     // public boolean login(String account, String password) {
-    //     String sql = String.format("SELECT * FROM usertable WHERE 顾客账户='%s',顾客密码='%s';", account, password);
+    //     String sql = String.format("SELECT * FROM usertable WHERE USACT='%s',USPSW='%s';", account, password);
     //     System.out.println(String.format("sql query: %s", sql));
     //     boolean verify = false;
     //     try {
@@ -45,7 +41,7 @@ public class UserTable {
     }
 
     // public String getUserType(String account) {
-    //     String sql = String.format("SELECT 顾客类型 FROM userTable WHERE 顾客账户='%s'", account);
+    //     String sql = String.format("SELECT USCL FROM userTable WHERE USACT='%s'", account);
     //     System.out.println(String.format("sql query: %s", sql));
     //     String type = "";
     //     try {
@@ -61,7 +57,7 @@ public class UserTable {
     // }
 
     public String getUserType(String account) {
-        return "merchant";
+        return "customer";
     }
 
 }

@@ -74,7 +74,7 @@ public class LoginPanel extends JPanel {
                     if (userType.equals("merchant")) {
                         mainFrame.showMerchantPanel();
                     } else {
-                        mainFrame.showCustomerPanel();
+                        mainFrame.showCusSearchPanel();
                     }
                 } else {
                     JOptionPane.showMessageDialog(mainFrame, "登陆失败！");
